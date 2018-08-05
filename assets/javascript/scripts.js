@@ -44,7 +44,7 @@ function init(){
      li.appendChild(button);
      playIcon.addEventListener("click", setSongName);
      button.addEventListener("click", addToPlaylist);
-     console.log(songsArray[i].songUrl);
+     
      ul.appendChild(li);
     }
     for(let i=12; i<20; i++){
@@ -69,7 +69,7 @@ function init(){
         li.appendChild(button);
         playIcon.addEventListener("click", setSongName);
         button.addEventListener("click", addToPlaylist);
-        console.log(songsArray[i].songUrl);
+       
         english.appendChild(li);
        }
        for(let i=20; i<32; i++){
@@ -94,7 +94,7 @@ function init(){
         li.appendChild(button);
         playIcon.addEventListener("click", setSongName);
         button.addEventListener("click", addToPlaylist);
-        console.log(songsArray[i].songUrl);
+        
         punjabi.appendChild(li);
        }
     loadPlaylist();
@@ -103,7 +103,7 @@ function init(){
 function setSongName(){
     // var songName = event.srcElement.parentElement;
     var songName = event.srcElement.parentElement.childNodes[2].innerText;
-    console.log(songName);
+   
     playSong(songName);
 }
 
@@ -155,7 +155,7 @@ function stopSong(){
 
 function addToPlaylist(){
   var songId = event.srcElement.parentElement.childNodes[2].title;
-    console.log("add to playlist");
+ 
   for(let i=0; i<songsArray.length; i++){
       if(songId == songsArray[i].songId){
           object.addSong(songsArray[i].songId, songsArray[i].songName, songsArray[i].songUrl, songsArray[i].songImage);
@@ -203,7 +203,7 @@ function deleteSong(){
     // console.log($(this).parentsUntil('li'));
     
         var toDelete = event.srcElement.parentElement;
-        console.log(toDelete.childNodes[2].title);
+      
         object.deleteSong(toDelete.childNodes[2].title)
        //  toDelete.style.display = 'none';
        showPlaylist();
@@ -215,7 +215,7 @@ function deleteSong(){
 function savePlaylist(){
     if(window.localStorage){
         var json = JSON.stringify(object.playlist);
-        console.log(json);
+      
         localStorage.setItem('myPlaylist', json);
         alert("Your playlist is saved..")
     }
@@ -262,7 +262,7 @@ function nextSong(){
 function previousSong(){
     var songId = audio.title;
     var p_song = parseInt(songId)-1;
-    console.log(p_song);
+ 
     var songName;
     for(let i=0; i<songsArray.length; i++){
         if(p_song == songsArray[i].songId){
