@@ -169,7 +169,7 @@ const songsArray = [
     {
         'songId': 28,
         'songName': 'Pappleen',
-        'songUrl' : 'assets/songs/papleen.mp3',
+        'songUrl' : 'assets/songs/pappleen.mp3',
         'songImage': 'https://punjabipollywood.com/wp-content/uploads/2016/06/papleen-diljit-dosanjh.png'
     },
     {
